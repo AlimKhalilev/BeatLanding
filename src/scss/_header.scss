@@ -1,0 +1,356 @@
+// === header === [ Стили для навбара, используемые на всех страницах ] ===
+
+.section-header {
+    height: var(--header_height);
+    display: flex;
+    align-items: center;
+    //z-index: 11;
+
+    .section-inner {
+    
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @media ($media_sm) {
+            flex-direction: column;
+        }
+
+        &-logo {
+
+            @media ($media_sm) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+            }
+
+            .logo {
+                display: flex;
+                width: 12rem;
+
+                @media ($media_sm) {
+                    width: 11rem;
+                }
+
+                picture {
+                    display: inline-flex;
+                }
+
+                &-icon {
+                    max-width: 100%;
+                }
+            }
+
+            .operation {
+                position: relative;
+                display: none;
+
+                @media ($media_sm) {
+                    display: flex;
+
+                    label {
+                        display: inherit;
+
+                        picture {
+                            display: inline-flex;
+                        }
+                    }
+
+                    input[type='checkbox']:checked ~ .dropdown {
+                        display: block;
+                    }
+
+                }
+            }
+        }
+
+        &-controls {
+            display: flex;
+            align-items: center;
+
+            @media ($media_sm) {
+                position: absolute;
+                top: var(--header_height);
+                background-color: $color_body_bg;
+                height: calc(100vh - (var(--header_height)));
+                padding: 0 5%;
+
+                flex-direction: column;
+                align-items: flex-start;
+
+                &[data-burger='menu'] {
+                    display: none; // если бургер меню активно
+                    width: 100%;
+                }
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            &-links {
+    
+                .menu {
+                    display: flex;
+    
+                    @media ($media_sm) {
+                        display: inline-flex;
+                        flex-direction: column;
+                    }
+    
+                    &-item {
+                        position: relative;
+    
+                        a {
+                            color: $color_black_main;
+                            text-decoration: none;
+                            font-weight: 500;
+                            position: relative;
+                            transition: 0.3s ease-in-out;
+
+                            @media ($media_sm) {
+                                font-size: 1.6rem;
+                            }
+                        }
+    
+                        &:not(:last-child) {
+                            margin-right: 1.8rem;
+
+                            @media ($media_sm) {
+                                margin: 0 0 1.5rem 0;
+                            }
+                        }
+    
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0.2rem;
+                            left: 50%;
+                            width: 110%;
+                            height: 0.33rem;
+                            background-color: $color_yellow;
+                            transform: translateX(-50%);
+                            transition: 0.3s ease-in-out;
+                            opacity: 0;
+
+                            @media ($media_sm) {
+                                bottom: 0.5rem;
+                            }
+                        }
+    
+                        &.active {
+                            &::before {
+                                opacity: 0.99;
+                            }
+
+                            &:hover {
+                                a {
+                                    color: $color_black_main;
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            a {
+                                color: $color_blue;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-operation {
+            display: flex;
+            align-items: center;
+
+            @media ($media_sm) {
+                display: none
+            }
+
+            &-lang {
+                margin-right: 1.2rem;
+                position: relative;
+
+                label {
+                    cursor: pointer;
+
+                    span {
+                        font-size: 0.9rem;
+                        color: $color_blue;
+                        font-weight: 500;
+                    }
+    
+                    svg {
+                        width: 0.7rem;
+                        height: 0.7rem;
+                        stroke: $color_blue;
+                    }
+                }
+
+                input[type='checkbox']:checked ~ label ~ .dropdown {
+                    display: block;
+                }
+
+                input[type='checkbox']:checked ~ label {
+
+                    svg {
+                        transform: rotate(180deg);
+                        stroke: $color_blue_hover;
+                    }
+
+                    span {
+                        color: $color_blue_hover;
+                    }
+                }
+            }
+
+            &-btn {
+                display: flex;
+                align-items: center;
+
+                &-icon {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 0.5rem;
+
+                    svg {
+                        width: 1.1rem;
+                        height: 1.1rem;
+                    }
+                }
+
+                &-links {
+
+                    a {
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        color: $color_blue;
+                        text-decoration: none;
+                        border-bottom: 1px solid transparent;
+
+                        &:hover {
+                            border-color: $color_blue;
+                        }
+
+                        &:not(:last-child) {
+                            position: relative;
+                            margin-right: 0.5rem;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 2px;
+                                height: 70%;
+                                background-color: $color_blue;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                right: -0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .dropdown {
+            position: absolute;
+            right: 0;
+            bottom: -0.5rem;
+            transform: translateY(100%);
+            display: none;
+            z-index: 1;
+
+            background: $color_bg_secondary;
+            border: 1px solid $color_border;
+            box-shadow: 0px 18px 16px -13px rgba(62, 84, 216, 0.1);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+
+            @media ($media_sm) {
+                input[type='checkbox']:checked ~ .menu {
+
+                    label {
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                    }
+    
+                    ~ .content {
+                        display: grid;
+                    }
+                }
+    
+                .menu {
+                    display: flex;
+                    flex-direction: column;
+    
+                    a {
+                        font-weight: 500;
+                        color: $color_blue;
+                        text-decoration: none;
+                        font-size: 1.1rem;
+                        display: flex;
+                        align-items: center;
+    
+                        &:not(:last-child) {
+                            margin-bottom: 1.5rem;
+                        }
+    
+                        label {
+                            display: flex;
+                            align-items: center;
+                        }
+    
+                        svg {
+                            width: 1rem;
+                            height: 1rem;
+                            stroke: $color_blue;
+                            margin-left: 0.3rem;
+                            margin-top: -0.1rem;
+                        }
+                    }
+                }
+            }
+
+            .content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.2rem;
+
+                @media ($media_sm) {
+                    display: none;
+                    grid-template-columns: 1fr;
+                    max-height: 10rem;
+                    overflow-y: scroll;
+
+                    border-top: 1px solid $color_border;
+                    padding-top: 1.5rem;
+                    margin-top: 1.5rem;
+                }
+
+                span {
+                    font-size: 1.1rem;
+                    cursor: pointer;
+
+                    &.active {
+                        font-weight: 600;
+                        color: $color_blue;
+                    }
+
+                    &:hover {
+                        color: $color_blue;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// === / header ===

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+
+		@@include('_head.html', {
+			"title": "BeatLanding - Мой портфель"
+		})
+
+	</head>
+	<body>
+
+		@@include("_header.html", {
+			"pageCounselor": "",
+			"pagePortfolio": "active",
+			"pageTarrifs": "",
+			"pageFaq": "",
+		})
+
+		<section class="section-outer section-main">
+			<div class="section-inner main">
+				<div class="main-content">
+					<div class="main-content-header">
+						<h1 class="page_header">Учёт и контроль <br><strong>ваших инвестиций</strong></h1>
+					</div>
+					<ul class="main-content-list">
+						<li>Следите за портфелем</li>
+						<li>Добавляйте купленные акции, анализируйте доходность</li>
+						<li>Доступно для акций и ETF NYSE, NASDAQ, Санкт-Петербургской биржи</li>
+					</ul>
+					<div class="main-content-btn">
+						<button class="btn btn_blue">Попробовать 30 дней бесплатно</button>
+					</div>
+				</div>
+				<div class="main-img">
+					<img src="./img/promo_mobile.png" alt="Изображение смартфона">
+				</div>
+			</div>
+		</section>
+
+		@@include("_footer.html")
+
+	</body>
+</html>

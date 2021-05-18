@@ -1,0 +1,108 @@
+@import "./lib/normalize";
+@import "./lib/colors";
+@import "./lib/grid";
+//@import "./lib/fonts";
+//@import "./lib/lightslider";
+//@import "./lib/selectric";
+//@import "./lib/animate";
+@import "./lib/mixins";
+@import "./lib/burger";
+//@import "./lib/modal";
+
+@import "header";
+@import "footer";
+
+// === main ===
+
+.section-main {
+    padding: 2.5rem 0;
+
+    @media ($media_sm) {
+        padding: 2.5rem 0 0 0;
+    }
+
+    .section-inner {
+    
+    }
+    
+    .main {
+        display: flex;
+        justify-content: space-between;
+
+        @media ($media_sm) {
+            position: relative;
+            flex-direction: column;
+        }
+
+        &-content {
+            margin-top: 6rem;
+
+            @media ($media_sm) {
+                margin-top: 0;
+            }
+
+            &-header {
+
+            }
+
+            &-list {
+                padding: 3.33rem 0;
+
+                @media ($media_sm) {
+                    padding: 2rem 0;
+                }
+
+                li {
+                    position: relative;
+                    padding-left: 1rem;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0.8rem;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        background-color: $color_red;
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-radius: 50%;
+                        left: 0rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        @media ($media_sm) {
+                            top: 0.5rem;
+                            transform: none;
+                        }
+                    }
+                }
+            }
+
+            &-btn {
+                @media ($media_sm) {
+                    position: absolute;
+                    bottom: 4.3rem;
+                    width: 100%;
+                }
+            }
+        }
+
+        &-img {
+            width: 25rem;
+            margin-right: -5rem;
+
+            @media ($media_sm) {
+                width: 65%;
+                margin: 0 auto;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    
+}
+
+// === / main ===

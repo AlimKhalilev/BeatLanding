@@ -1,0 +1,118 @@
+// === Mixins [ Шаблоны классов стилей, используемых на всех страницах ]===
+
+// используется для одинаковых отступов внутри секций
+:root {
+    --section_padding: 5.55rem;
+    --fixed_header_margin: 5rem;
+    --header_height: 7rem;
+
+    @media ($media_xs) {
+        --section_padding: 2rem;
+    }
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: $color_body_bg;
+
+    &.hideScroll {
+        overflow-y: hidden;
+    }
+
+    @media ($media_xl) {
+        font-size: 16px;
+    }
+
+    @media ($media_sm) {
+        font-size: 14px;
+    }
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+
+    &.visible {
+        visibility: visible;
+        opacity: 0.8;
+    }
+}
+
+.visually_hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.btn {
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn_primary {
+    background-color: $color_white;
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.22);
+}
+
+.btn_blue {
+    background-color: $color_blue;
+    color: $color_white;
+    box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
+    padding: 1.66rem 2.88rem;
+
+    &:hover, &:focus {
+        background-color: $color_blue_hover;
+    }
+
+    @media ($media_sm) {
+        width: 100%;
+        padding: 2rem 0;
+    }
+}
+
+.page_header {
+    font-weight: bold;
+    font-size: 3.5rem;
+    line-height: 1.25;
+    color: $color_black_title;
+
+    @media ($media_sm) {
+        font-size: 2.2rem;
+    }
+
+    strong {
+        color: $color_blue;
+    }
+}
+
+.section_header {
+    font-weight: bold;
+    font-size: 2.77rem;
+    color: $color_black_title;
+}
+
+.founder_header {
+    font-weight: 600;
+    font-size: 2.66rem;
+    line-height: 1.3;
+    color: $color_black_title;
+    opacity: 0.9;
+}
+
+// === / Mixins ===
