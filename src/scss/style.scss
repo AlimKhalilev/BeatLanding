@@ -35,7 +35,7 @@
         }
 
         &-content {
-            margin-top: 6rem;
+            margin-top: 5.5rem;
 
             @media ($media_sm) {
                 margin-top: 0;
@@ -104,5 +104,124 @@
     }
     
 }
+
+// === excel ===
+
+.section-excel {
+    padding: var(--section_padding) 0;
+
+    .section-inner {
+    
+    }
+    
+    .excel {
+        &-header {
+            text-align: center;
+        }
+
+        &-text {
+            width: 65%;
+            margin: 2.5rem auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 500;
+
+            @media ($media_sm) {
+                width: 100%;
+            }
+
+        }
+
+        &-img {
+            width: calc(100% + 9rem);
+            margin-left: -4.5rem;
+
+            @media ($media_sm) {
+                width: calc(100% + 2rem);
+                margin-left: -1rem;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    
+}
+
+// === / excel ===
+
+// === founder ===
+
+.section-founder {
+    padding: 5.55rem 0 0 0;
+
+    @media ($media_sm) {
+        padding: var(--section_padding) 0;
+    }
+
+    .section-inner {
+    
+    }
+    
+    .founder {
+        display: flex;
+        justify-content: space-between;
+
+        @media ($media_sm) {
+            flex-direction: column;
+        }
+
+        &-content {
+            margin-top: 6rem;
+
+            @media ($media_sm) {
+                margin-top: 2rem;
+            }
+
+            &-header {
+
+            }
+
+            &-text {
+                width: 80%;
+                font-size: 1.1rem;
+                padding: 3rem 0;
+                line-height: 1.7;
+
+                @media ($media_sm) {
+                    width: 100%;
+                }
+
+                strong {
+                    font-weight: 600;
+                }
+            }
+
+            &-btn {
+
+            }
+        }
+
+        &-img {
+            min-width: 30rem;
+
+            @media ($media_sm) {
+                min-width: 85%;
+                max-width: 85%;
+                margin: 0 auto;
+                padding-left: 2rem;
+                order: -1;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+    
+}
+
+// === / founder ===
 
 // === / main ===

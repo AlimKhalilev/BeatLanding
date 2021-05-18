@@ -116,7 +116,7 @@ function images() {
    return src(path.src.img)
        .pipe(
            webp({
-               quality: 95
+               quality: 100
            })
        )
        .pipe(dest(path.build.img))
@@ -125,7 +125,7 @@ function images() {
            imagemin({
                progressive: true,
                interlaced: true,
-               optimizationLevel: 3 // 0 to 7
+               optimizationLevel: 0 // 0 to 7
            })
        )
        .pipe(dest(path.build.img))
