@@ -105,7 +105,6 @@
                     }
     
                     &-item {
-                        position: relative;
     
                         a {
                             color: $color_black_main;
@@ -113,6 +112,27 @@
                             font-weight: 500;
                             position: relative;
                             transition: 0.3s ease-in-out;
+
+                            span {
+                                position: relative;
+                            }
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                bottom: 0.1rem;
+                                left: 50%;
+                                width: 110%;
+                                height: 0.33rem;
+                                background-color: $color_yellow;
+                                transform: translateX(-50%);
+                                transition: 0.3s ease-in-out;
+                                opacity: 0;
+    
+                                @media ($media_sm) {
+                                    bottom: 0.3rem;
+                                }
+                            }
 
                             @media ($media_sm) {
                                 font-size: 1.6rem;
@@ -127,26 +147,11 @@
                             }
                         }
     
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            bottom: 0.2rem;
-                            left: 50%;
-                            width: 110%;
-                            height: 0.33rem;
-                            background-color: $color_yellow;
-                            transform: translateX(-50%);
-                            transition: 0.3s ease-in-out;
-                            opacity: 0;
-
-                            @media ($media_sm) {
-                                bottom: 0.5rem;
-                            }
-                        }
-    
                         &.active {
-                            &::before {
-                                opacity: 0.99;
+                            a {
+                                &::before {
+                                    opacity: 0.99;
+                                }
                             }
 
                             &:hover {
