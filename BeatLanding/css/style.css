@@ -419,7 +419,7 @@ button {
 }
 
 :root {
-  --section_padding: 5rem;
+  --section_padding: 6rem;
   --fixed_header_margin: 5rem;
   --header_height: 7rem;
 }
@@ -547,6 +547,7 @@ body.hideScroll {
   font-weight: bold;
   font-size: 2.77rem;
   color: #24252E;
+  text-align: center;
 }
 
 .founder_header {
@@ -557,8 +558,15 @@ body.hideScroll {
   opacity: 0.9;
 }
 
+.card_header {
+  font-size: 1.66rem;
+  color: #24252E;
+  opacity: 0.9;
+}
+
 span.mark {
   position: relative;
+  white-space: nowrap;
 }
 
 span.mark span {
@@ -1008,10 +1016,6 @@ span.mark::before {
   padding: var(--section_padding) 0;
 }
 
-.section-excel .excel-header {
-  text-align: center;
-}
-
 .section-excel .excel-text {
   width: 65%;
   margin: 2.5rem auto;
@@ -1027,6 +1031,227 @@ span.mark::before {
 
 .section-excel .excel-img img {
   max-width: 100%;
+}
+
+.section-investors {
+  padding-bottom: var(--section_padding);
+}
+
+.section-investors .investors-text {
+  width: 65%;
+  margin: 2.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.section-investors .investors-text strong {
+  color: #3E54D8;
+}
+
+.section-investors .investors-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-investors .investors-cards-card {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+}
+
+.section-investors .investors-cards-card-icon {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.06);
+          box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.06);
+  border-radius: 2rem;
+  width: 20rem;
+  height: 20rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-investors .investors-cards-card-icon picture img {
+  max-width: 100%;
+}
+
+.section-investors .investors-cards-card-header {
+  margin: 2rem 0 1rem 0;
+}
+
+.section-investors .investors-cards-card-text strong {
+  font-weight: 600;
+}
+
+.section-investors .investors-btn {
+  text-align: center;
+  margin-top: var(--section_padding);
+}
+
+.section-comfort {
+  padding: var(--section_padding) 0;
+}
+
+.section-comfort .comfort-header {
+  margin-bottom: var(--section_padding);
+}
+
+.section-comfort .comfort-cards-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: -2rem;
+}
+
+.section-comfort .comfort-cards-card-text {
+  margin: auto 0;
+  -webkit-transform: translateY(-2rem);
+      -ms-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  line-height: 1.6;
+}
+
+.section-comfort .comfort-cards-card-text .card_header {
+  margin-bottom: 1.5rem;
+}
+
+.section-comfort .comfort-cards-card-text strong {
+  font-weight: 600;
+}
+
+.section-comfort .comfort-cards-card-img {
+  min-width: 39rem;
+  margin-right: -3.8rem;
+}
+
+.section-comfort .comfort-cards-card-img img {
+  max-width: 100%;
+}
+
+.section-comfort .comfort-cards-card.reverse .comfort-cards-card-img {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-left: -3.8rem;
+  margin-right: -1rem;
+}
+
+.section-trust {
+  background-color: #fff;
+  padding: var(--section_padding) 0;
+}
+
+.section-trust .trust-header {
+  margin-bottom: 4rem;
+}
+
+.section-trust .trust-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-trust .trust-cards-card {
+  -ms-flex-preferred-size: 23%;
+      flex-basis: 23%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-trust .trust-cards-card-icon {
+  background: #fff;
+  border: 1px solid #E6EEFF;
+  -webkit-box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.12);
+          box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.12);
+  border-radius: 2rem;
+  width: 14rem;
+  height: 14rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-trust .trust-cards-card-icon picture {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 7rem;
+}
+
+.section-trust .trust-cards-card-icon picture img {
+  max-width: 100%;
+}
+
+.section-trust .trust-cards-card-header {
+  min-height: 2rem;
+}
+
+.section-trust .trust-cards-card-header h4 {
+  color: #24252E;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 2rem 0;
+  min-height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-trust .trust-cards-card-text {
+  margin-top: auto;
+}
+
+.section-trust .trust-cards-card-text p {
+  font-size: 0.9rem;
+}
+
+.section-trust .trust-subheader {
+  margin: var(--section_padding) 0 3rem 0;
+}
+
+.section-trust .trust-subheader h3 {
+  font-size: 1.77rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section-trust .trust-subheader h3 .mark::before {
+  bottom: 0.2rem;
+}
+
+.section-trust .trust-btn {
+  text-align: center;
 }
 
 .section-founder {
@@ -1073,6 +1298,21 @@ span.mark::before {
   html,
   body {
     font-size: 16px;
+  }
+
+  .section-comfort .comfort-cards-card-img {
+    min-width: 37rem;
+    margin-right: -3.8rem;
+  }
+
+  .section-comfort .comfort-cards-card.reverse .comfort-cards-card-img {
+    min-width: 37rem;
+    margin-right: 0rem;
+  }
+
+  .section-trust .trust-cards-card {
+    -ms-flex-preferred-size: 24%;
+        flex-basis: 24%;
   }
 }
 
@@ -1356,6 +1596,88 @@ span.mark::before {
   .section-excel .excel-img {
     width: calc(100% + 2rem);
     margin-left: -1rem;
+  }
+
+  .section-investors .investors-text {
+    width: 100%;
+  }
+
+  .section-investors .investors-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .section-investors .investors-cards-card:not(:last-child) {
+    margin-bottom: var(--section_padding);
+  }
+
+  .section-investors .investors-cards-card-icon {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .section-comfort .comfort-cards-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: -1rem;
+  }
+
+  .section-comfort .comfort-cards-card-img {
+    margin: 0;
+    min-width: 115%;
+    margin-left: -7.5%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+
+  .section-comfort .comfort-cards-card.reverse .comfort-cards-card-img {
+    margin: 0;
+    min-width: 115%;
+    margin-left: -7.5%;
+  }
+
+  .section-trust .trust-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .section-trust .trust-cards-card {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .section-trust .trust-cards-card:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
+  .section-trust .trust-cards-card-icon {
+    width: 65vw;
+    height: 65vw;
+  }
+
+  .section-trust .trust-cards-card-icon picture {
+    width: 9rem;
+  }
+
+  .section-trust .trust-cards-card-header h4 {
+    font-size: 1.3rem;
+  }
+
+  .section-trust .trust-cards-card-text p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .section-trust .trust-subheader {
+    margin: 3rem 0;
   }
 
   .section-founder {

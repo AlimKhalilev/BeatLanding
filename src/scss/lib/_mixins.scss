@@ -2,7 +2,7 @@
 
 // используется для одинаковых отступов внутри секций
 :root {
-    --section_padding: 5rem;
+    --section_padding: 6rem;
     --fixed_header_margin: 5rem;
     --header_height: 7rem;
 
@@ -145,6 +145,7 @@ html, body {
     font-weight: bold;
     font-size: 2.77rem;
     color: $color_black_title;
+    text-align: center;
 
     @media ($media_sm) {
         font-size: 2.15rem;
@@ -165,8 +166,15 @@ html, body {
     }
 }
 
+.card_header {
+    font-size: 1.66rem;
+    color: $color_black_title;
+    opacity: 0.9;
+}
+
 span.mark {
     position: relative;
+    white-space: nowrap;
 
     span {
         position: inherit;
