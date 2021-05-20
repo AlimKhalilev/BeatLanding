@@ -532,25 +532,6 @@ body.hideScroll {
   color: #3E54D8;
 }
 
-.btn_tarrifs {
-  font-weight: 600;
-  color: #3E54D8;
-  border: 1px solid #D3E3FF;
-  padding: 1.5rem 3rem;
-  background-color: #fff;
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-
-.btn_tarrifs:hover {
-  -webkit-box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
-          box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
-  background-color: #3E54D8;
-  color: #fff;
-  border-color: #3E54D8;
-}
-
 .page_header {
   font-weight: bold;
   font-size: 3.5rem;
@@ -635,27 +616,19 @@ span.mark::before {
   display: inline-flex;
 }
 
-.burger-opened {
+.burger.opened .burger-closed {
   display: none;
 }
 
-.burger input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 21px;
-  height: 21px;
-  position: absolute;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 1;
-}
-
-.burger input:checked ~ picture > .burger-opened {
+.burger.opened .burger-opened {
   display: block;
 }
 
-.burger input:checked ~ picture > .burger-closed {
+.burger-closed {
+  display: block;
+}
+
+.burger-opened {
   display: none;
 }
 
@@ -1660,6 +1633,14 @@ span.mark::before {
           transform: translate(50%, -50%) scale(1.8);
 }
 
+.section-tarrifs .tarrifs-cards-card:hover .btn_tarrifs {
+  -webkit-box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
+          box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
+  background-color: #3E54D8;
+  color: #fff;
+  border-color: #3E54D8;
+}
+
 .section-tarrifs .tarrifs-cards-card-header h3 {
   color: #24252E;
   font-size: 1.33rem;
@@ -1696,6 +1677,179 @@ span.mark::before {
   margin-top: auto;
 }
 
+.section-tarrifs .tarrifs-cards-card-btn .btn_tarrifs {
+  font-weight: 600;
+  color: #3E54D8;
+  border: 1px solid #D3E3FF;
+  padding: 1.5rem 3rem;
+  background-color: #fff;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.section-tarrifs .tarrifs-cards-card-btn .btn_tarrifs:hover {
+  -webkit-box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
+          box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
+  background-color: #1B2D9D;
+  color: #fff;
+  border-color: #1B2D9D;
+}
+
+.section-faq {
+  padding: calc(var(--section_padding) - 2rem) 0 var(--section_padding) 0;
+}
+
+.section-faq .faq-header {
+  text-align: center;
+}
+
+.section-faq .faq-subheader {
+  width: 55%;
+  margin: 3rem auto 5rem auto;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.section-faq .faq-subheader strong {
+  font-weight: 600;
+}
+
+.section-faq .faq .sprites {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section-faq .faq .sprites .sprite-1 {
+  height: 8rem;
+  width: 8rem;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  background-color: #F3B63F;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.section-faq .faq .sprites .sprite-2 {
+  height: 3.2rem;
+  width: 6.4rem;
+  border-top-right-radius: 3.2rem;
+  border-bottom-right-radius: 3.2rem;
+  background-color: #199F27;
+  position: absolute;
+  right: -4rem;
+  top: 10rem;
+}
+
+.section-faq .faq .sprites .sprite-3 {
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 50%;
+  background-color: #3E54D8;
+  position: absolute;
+  left: -5rem;
+  top: 25rem;
+}
+
+.section-faq .faq .sprites .sprite-4 {
+  height: 8rem;
+  width: 8rem;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: #ED6373;
+  position: absolute;
+  right: 0;
+  top: 28rem;
+  -webkit-transform: translate(70%, 50%);
+      -ms-transform: translate(70%, 50%);
+          transform: translate(70%, 50%);
+}
+
+.section-faq .faq-container {
+  position: relative;
+  background: #fff;
+  border-radius: 1.1rem;
+  padding: 3rem 5rem;
+}
+
+.section-faq .faq-container-items-item {
+  padding: 1.8rem 0;
+  border-bottom: 1px solid #D3E3FF;
+  cursor: pointer;
+}
+
+.section-faq .faq-container-items-item:hover .faq-container-items-item-header p {
+  color: #3E54D8;
+}
+
+.section-faq .faq-container-items-item-header {
+  position: relative;
+  padding-right: 1.2rem;
+}
+
+.section-faq .faq-container-items-item-header.opened svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  fill: #3E54D8;
+}
+
+.section-faq .faq-container-items-item-header p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.section-faq .faq-container-items-item-header svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  fill: #7e8ce5;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+}
+
+.section-faq .faq-container-items-item-content {
+  margin-top: 1.5rem;
+  display: none;
+  line-height: 1.6;
+}
+
+.section-faq .faq-container-question {
+  margin-top: 3.5rem;
+}
+
+.section-faq .faq-container-question h4 {
+  color: #24252E;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.section-faq .faq-container-question p a {
+  color: #3E54D8;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.section-faq .faq-container-question p a:hover,
+.section-faq .faq-container-question p a:focus {
+  border-color: #3E54D8;
+}
+
 @media (max-width: 1600px) {
   .section-inner {
     max-width: 1080px;
@@ -1706,14 +1860,8 @@ span.mark::before {
     font-size: 16px;
   }
 
-  .section-comfort .comfort-cards-card-img {
-    min-width: 37rem;
-    margin-right: -3.8rem;
-  }
-
-  .section-comfort .comfort-cards-card.reverse .comfort-cards-card-img {
-    min-width: 37rem;
-    margin-right: 0rem;
+  .section-comfort .comfort-cards-card.reverse .comfort-cards-card-text {
+    margin-left: 2.5rem;
   }
 
   .section-trust .trust-cards-card {
@@ -1730,6 +1878,18 @@ span.mark::before {
   html,
   body {
     font-size: 15px;
+  }
+
+  .section-comfort .comfort-cards-card-img {
+    min-width: 37rem;
+  }
+
+  .section-comfort .comfort-cards-card.reverse .comfort-cards-card-img {
+    min-width: 37rem;
+  }
+
+  .section-comfort .comfort-cards-card.reverse .comfort-cards-card-text {
+    margin-left: 2rem;
   }
 }
 
@@ -1764,12 +1924,6 @@ span.mark::before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-
-  .btn_tarrifs {
-    padding: 1.5rem 0;
-    width: 100%;
-    text-align: center;
   }
 
   .page_header {
@@ -2210,8 +2364,8 @@ span.mark::before {
   }
 
   .section-choose .choose-info-img {
-    width: 100%;
-    margin: 0 -1rem;
+    width: 110%;
+    margin: 0 -5%;
   }
 
   .section-choose .choose-info-items-item picture {
@@ -2238,6 +2392,57 @@ span.mark::before {
     -webkit-transform: translate(50%, -50%) scale(1.3);
         -ms-transform: translate(50%, -50%) scale(1.3);
             transform: translate(50%, -50%) scale(1.3);
+  }
+
+  .section-tarrifs .tarrifs-cards-card-btn .btn_tarrifs {
+    padding: 1.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-faq .faq-subheader {
+    width: 100%;
+  }
+
+  .section-faq .faq .sprites {
+    width: 100%;
+  }
+
+  .section-faq .faq .sprites .sprite-1 {
+    -webkit-transform: translate(-30%, -50%) scale(0.6);
+        -ms-transform: translate(-30%, -50%) scale(0.6);
+            transform: translate(-30%, -50%) scale(0.6);
+  }
+
+  .section-faq .faq .sprites .sprite-2 {
+    -webkit-transform: scale(0.8) translate(-45%, 0);
+        -ms-transform: scale(0.8) translate(-45%, 0);
+            transform: scale(0.8) translate(-45%, 0);
+  }
+
+  .section-faq .faq .sprites .sprite-3 {
+    left: 0%;
+    -webkit-transform: scale(0.8) translate(-45%, 0);
+        -ms-transform: scale(0.8) translate(-45%, 0);
+            transform: scale(0.8) translate(-45%, 0);
+  }
+
+  .section-faq .faq .sprites .sprite-4 {
+    -webkit-transform: scale(0.3) translate(150%, 50%);
+        -ms-transform: scale(0.3) translate(150%, 50%);
+            transform: scale(0.3) translate(150%, 50%);
+  }
+
+  .section-faq .faq-container {
+    padding: 2rem 1rem;
+  }
+
+  .section-faq .faq-container-items-item {
+    cursor: initial;
+  }
+
+  .section-faq .faq-container-question {
+    margin-top: 2.5rem;
   }
 }
 

@@ -1,11 +1,20 @@
 --include("_webpsup.js");
 
 $(document).ready(function() {
- 
-    --include("_modal.js")
+
     --include("_burger.js")
-    --include("_slider.js")
-    --include("_selectric.js")
-    --include("_scroll.js")
+
+    $('.faq-container-items-item').click(function () {
+        let header = $(this).children();
+        let content = header.next();
+        header.toggleClass("opened");
+    
+        if (!content.is(':visible')) {
+            content.slideDown('normal');
+        } 
+        else {
+            content.slideUp('normal');
+        }
+    });
     
 });

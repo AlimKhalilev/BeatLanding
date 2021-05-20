@@ -19,25 +19,21 @@
         display: inline-flex;
     }
 
-    &-opened {
-        display: none;
+    &.opened {
+        .burger-closed {
+            display: none;
+        }
+    
+        .burger-opened {
+            display: block;
+        }
     }
 
-    input {
-        display: flex;
-        width: 21px;
-        height: 21px;
-        position: absolute;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 1;
-    }
-
-    input:checked ~ picture > .burger-opened {
+    &-closed {
         display: block;
     }
 
-    input:checked ~ picture > .burger-closed {
+    &-opened {
         display: none;
     }
 }

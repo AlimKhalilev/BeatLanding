@@ -130,28 +130,6 @@ html, body {
 
 }
 
-.btn_tarrifs {
-    font-weight: 600;
-    color: $color_blue;
-    border: 1px solid $color_border;
-    padding: 1.5rem 3rem;
-    background-color: $color_white;
-    transition: 0.3s ease-in-out;
-
-    @media ($media_sm) {
-        padding: 1.5rem 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    &:hover {
-        box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.51);
-        background-color: $color_blue;
-        color: $color_white;
-        border-color: $color_blue;
-    }
-}
-
 .page_header {
     font-weight: bold;
     font-size: 3.5rem;
