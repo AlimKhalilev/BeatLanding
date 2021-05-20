@@ -2216,6 +2216,10 @@ span.mark::before {
     margin-left: -7.5%;
   }
 
+  .section-comfort .comfort-cards-card.reverse .comfort-cards-card-text {
+    margin-left: 0;
+  }
+
   .section-trust .trust-cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -334,6 +334,10 @@
                             @media ($media_lg) {
                                 margin-left: 2rem;
                             }
+
+                            @media ($media_sm) {
+                                margin-left: 0;
+                            }
                         }
 
                     }
