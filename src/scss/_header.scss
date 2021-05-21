@@ -183,6 +183,20 @@
                 margin-right: 1.2rem;
                 position: relative;
 
+                &:hover {
+
+                    label {
+
+                        span {
+                            color: $color_blue_hover;
+                        }
+
+                        svg {
+                            stroke: $color_blue_hover;
+                        }
+                    }
+                }
+
                 label {
                     cursor: pointer;
 
@@ -190,12 +204,14 @@
                         font-size: 0.9rem;
                         color: $color_blue;
                         font-weight: 500;
+                        transition: 0.3s ease-in-out;
                     }
     
                     svg {
                         width: 0.7rem;
                         height: 0.7rem;
                         stroke: $color_blue;
+                        transition: 0.3s ease-in-out;
                     }
                 }
 
@@ -239,6 +255,7 @@
                         color: $color_blue;
                         text-decoration: none;
                         border-bottom: 1px solid transparent;
+                        transition: 0.3s ease-in-out;
 
                         &:hover {
                             border-color: $color_blue;

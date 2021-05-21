@@ -753,6 +753,14 @@ span.mark::before {
   position: relative;
 }
 
+.section-header .header-operation-lang:hover label span {
+  color: #1B2D9D;
+}
+
+.section-header .header-operation-lang:hover label svg {
+  stroke: #1B2D9D;
+}
+
 .section-header .header-operation-lang label {
   cursor: pointer;
 }
@@ -761,12 +769,18 @@ span.mark::before {
   font-size: 0.9rem;
   color: #3E54D8;
   font-weight: 500;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .section-header .header-operation-lang label svg {
   width: 0.7rem;
   height: 0.7rem;
   stroke: #3E54D8;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .section-header .header-operation-lang input[type='checkbox']:checked ~ label ~ .dropdown {
@@ -814,6 +828,9 @@ span.mark::before {
   color: #3E54D8;
   text-decoration: none;
   border-bottom: 1px solid transparent;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .section-header .header-operation-btn-links a:hover {
@@ -899,6 +916,9 @@ span.mark::before {
   font-weight: 500;
   text-decoration: none;
   border-bottom: 1px solid transparent;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .section-footer .footer-contact a:hover,
@@ -1843,6 +1863,9 @@ span.mark::before {
   font-weight: 500;
   text-decoration: none;
   border-bottom: 1px solid transparent;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .section-faq .faq-container-question p a:hover,
