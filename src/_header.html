@@ -20,10 +20,10 @@
                 <div class="dropdown">
                     <input type="checkbox" id="openLangMobile" class="visually_hidden">
                     <div class="menu">
-                        <a href="#">
+                        <a data-modal="modal_auth">
                             <span>Вход</span>    
                         </a>
-                        <a href="#">
+                        <a data-modal="modal_reg">
                             <span>Регистрация</span>
                         </a>
                         <a href="#">
@@ -58,6 +58,7 @@
                 <ul class="menu">
                     <li class="menu-item @@pageCounselor"><a href="./counselor.html"><span>Советник</span></a></li>
                     <li class="menu-item @@pagePortfolio"><a href="./"><span>Мой портфель</span></a></li>
+                    <li class="menu-item @@pageCrypt"><a href="./cryptocurrency.html"><span>Криптовалюта</span></a></li>
                     <li class="menu-item @@pageTarrifs"><a href="./tarrifs.html"><span>Тарифы</span></a></li>
                     <li class="menu-item @@pageFaq"><a href="./faq.html"><span>Faq</span></a></li>
                 </ul>
@@ -98,8 +99,8 @@
                     <svg><use xlink:href="img/main.svg#icon-user"></use></svg>
                 </div>
                 <div class="header-operation-btn-links">
-                    <a href="#">Вход</a>
-                    <a href="#">Регистрация</a>
+                    <a href="#" data-modal="modal_auth">Вход</a>
+                    <a href="#" data-modal="modal_reg">Регистрация</a>
                 </div>
             </button>
         </div>

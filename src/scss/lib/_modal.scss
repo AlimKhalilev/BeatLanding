@@ -18,11 +18,12 @@
 }
 
 .modal {
-    padding: 3.5rem;
-    border-radius: 0.8rem;
-    box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, 0.1);
+    padding: 2.5rem 4.44rem;
     background-color: $color_white;
-    width: 34rem;
+    border: 1px solid $color_border;
+    box-shadow: 0px 44px 89px -17px rgba(62, 84, 216, 0.06);
+    border-radius: 1.1rem;
+    width: 40rem;
 
     @media ($media_xs) {
         width: 90%;
@@ -31,50 +32,245 @@
 
     &-header {
         text-align: center;
-        line-height: 1.27;
-        margin-bottom: 2.5rem;
+        line-height: 1.3;
+        color: $color_blue;
+        margin-bottom: 2.7rem;
 
-        @media ($media_xs) {
+        h2 {
+            font-size: 2.77rem;
+        }
+
+        @media ($media_sm) {
             margin-bottom: 1.5rem;
 
             h2 {
-                font-size: 1.4rem;
+                font-size: 2rem;
             }
         }
     }
 
     &-content {
-        text-align: center;
 
-        &-text {
-            padding: 1rem 0;
-        }
-
-        &-icon {
-            svg {
-                max-width: 10rem;
+        &.error {
+            .modal-content-group-error {
+                display: block;
             }
         }
-    }
 
-    &-close {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 2.8rem;
-        width: 2.8rem;
-        box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, 0.16);
-        transform: translate(40%, -40%);
-        background-color: $color_white;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.95rem;
-        cursor: pointer;
+        &.success {
+            .modal-content-group-success {
+                display: block;
+            }
+        }
 
-        svg {
-            fill: $color_black_main;
+        &-group {
+
+            &:not(:first-child) {
+                margin-top: 1.1rem;
+            }
+
+            &.error {
+
+                .modal-content-group-message {
+                    display: block;
+                }
+
+                .modal-content-group-input {
+                    .input_text {
+                        border-color: $color_red;
+                    }
+                }
+            }
+
+            &-error, &-success {
+                display: none;
+                text-align: center;
+            }
+
+            &-error {
+                color: $color_red;
+            }
+
+            &-success {
+                color: $color_green;
+            }
+
+            &-label {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.5rem;
+
+                @media ($media_sm) {
+                    flex-wrap: wrap;
+                }
+
+                h4 {
+                    color: $color_black_title;
+                    font-weight: 500;
+                    margin-right: 0.7rem;
+
+                    @media ($media_sm) {
+                        margin: 0 0 0.3rem 0;
+                    }
+                }
+
+                span {
+                    font-size: 0.8rem;
+                    color: $color_gray;
+
+                    @media ($media_sm) {
+                        width: 100%;
+                    }
+                }
+
+                strong {
+                    margin-left: auto;
+                    color: $color_blue;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            }
+
+            &-input {
+                
+                &.icon {
+                    position: relative;
+
+                    .input_text {
+                        padding: 0.8rem 2.5rem 0.8rem 1.3rem;
+
+                        ~ .eye_close {
+                            display: none;
+                        }
+
+                        &:focus {
+                            ~ svg {
+                                stroke: $color_blue;
+                            }
+                        }
+                    }
+
+                    svg {
+                        position: absolute;
+                        width: 1.2rem;
+                        right: 1rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        stroke: $color_svg_eye;
+                        transition: 0.3s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover {
+                            stroke: $color_blue;
+                        }
+                    }
+
+                    &.visible {
+                        .input_text {
+                            ~ .eye_close {
+                                display: block;
+                            }
+
+                            ~ .eye_open {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-message {
+                display: none;
+                margin-top: 0.5rem;
+
+                span {
+                    font-size: 0.8rem;
+                    color: $color_red;
+                }
+            }
+
+            &-checkbox {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                .checkbox_custom {
+                    transform: translateY(-0.65rem);
+                }
+
+                strong {
+                    margin-left: 2rem;
+                    font-weight: 500;
+                    color: $color_black_title;
+                }
+            }
+        }
+
+        &-btn {
+            display: flex;
+            margin-top: 1.8rem;
+
+            .btn {
+                width: 100%;
+                padding: 1.4rem 0;
+
+                &.btn_reverse {
+                    background-color: transparent;
+                    color: $color_blue;
+
+                    &:hover {
+                        color: $color_blue_hover;
+                    }
+                }
+            }
+
+            &.half {
+                justify-content: space-between;
+
+                .btn {
+                    flex-basis: 49%;
+                }
+
+                @media ($media_sm) {
+                    flex-direction: column;
+
+                    .btn {
+                        &:not(:last-child) {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-link {
+            margin-top: 1.8rem;
+            text-align: center;
+            font-weight: 500;
+
+            strong {
+                cursor: pointer;
+                color: $color_blue;
+                font-weight: 600;
+            }
+
+            &.icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                strong {
+                    font-weight: 500;
+                }
+
+                svg {
+                    width: .7rem;
+                    height: .7rem;
+                    stroke: #3e54d8;
+                    transform: rotate(90deg) translateX(-1px);
+                    margin-right: 0.5rem;
+                }
+            }
         }
     }
 }

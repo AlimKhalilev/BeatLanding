@@ -7,7 +7,7 @@
 //@import "./lib/animate";
 @import "./lib/mixins";
 @import "./lib/burger";
-//@import "./lib/modal";
+@import "./lib/modal";
 
 @import "header";
 @import "footer";
@@ -43,6 +43,20 @@
 
             &-header {
 
+            }
+
+            &-text {
+                padding: 3.33rem 0;
+                width: 90%;
+
+                p {
+                    font-size: 1.1rem;
+                    line-height: 1.7;
+                }
+
+                @media ($media_sm) {
+                    width: 100%;
+                }
             }
 
             &-list {
@@ -89,11 +103,11 @@
         }
 
         &-img {
-            width: 25rem;
+            min-width: 25rem;
             margin-right: -5rem;
 
             @media ($media_sm) {
-                width: 65%;
+                min-width: 65%;
                 margin: 0 auto;
             }
 
@@ -420,6 +434,24 @@
 
                         img {
                             max-width: 100%;
+                        }
+                    }
+                }
+
+                &.crypt {
+
+                    .trust-cards-card {
+
+                        &-header {
+                            h4 {
+                                font-size: 1.33rem;
+                                font-weight: 700;
+                                margin: 1.5rem 0;
+                            }
+                        }
+
+                        &-text {
+                            margin-top: 0;
                         }
                     }
                 }
@@ -1323,3 +1355,243 @@
 }
 
 // === / faq ===
+
+
+// === advantages ===
+
+.section-advantages {
+    padding-bottom: var(--section_padding);
+    margin-top: -3rem;
+
+    @media ($media_sm) {
+        margin-top: 0;
+    }
+
+    .section-inner {
+    
+    }
+    
+    .advantages {
+
+        &-header {
+            margin-bottom: var(--section_padding);
+        }
+
+        &-content {
+
+            &-item {
+                display: flex;
+
+                @media ($media_sm) {
+                    flex-direction: column;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: var(--section_padding);
+                }
+
+                &-info {
+
+                    @media ($media_sm) {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        &-header {
+                            margin: 0 0 1.5rem 0.9rem;
+                            width: calc(100% - 4.7rem);
+
+                            .card_header {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+
+                    &-icon {
+                        width: 3.8rem;
+                        height: 3.8rem;
+
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+
+                    &-header {
+                        margin: 1.4rem 0 1.77rem 0;
+                    }
+
+                    &-text {
+                        p {
+                            font-size: 1.1rem;
+
+                            strong {
+                                font-weight: 600;
+                            }
+
+                            .divider {
+                                display: block;
+                                margin-bottom: 0.5rem;
+                            }
+                        }
+
+                        br {
+                            padding-bottom: 1rem;
+                        }
+                    }
+                }
+
+                &-img {
+                    min-width: 22rem;
+                    max-width: 22rem;
+                    margin-bottom: -4rem;
+                    transform: translateY(-1rem);
+
+                    @media ($media_sm) {
+                        min-width: 110%;
+                        max-width: 110%;
+                        transform: translateY(1rem);
+                        margin-left: -5%;
+                    }
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// === / advantages ===
+
+// === cryptocount ===
+
+.section-cryptocount {
+    background-color: $color_white;
+    margin: calc(var(--section_padding) / 1.5) 0;
+
+    .section-inner {
+    
+    }
+    
+    .cryptocount {
+        position: relative;
+        padding: calc(var(--section_padding) / 2) 0;
+        display: flex;
+
+        @media ($media_sm) {
+            flex-direction: column-reverse;
+            padding: var(--section_padding) 0 calc(var(--section_padding) * 3) 0;
+        }
+
+        .sprites {
+
+            .sprite {
+                position: absolute;
+                content: "";
+
+                &-1 {
+                    width: 12.4rem;
+                    height: 6.2rem;
+                    background-color: $color_yellow;
+                    border-top-left-radius: 6.2rem;
+                    border-top-right-radius: 6.2rem;
+                    top: 0;
+                    left: -1rem;
+                    transform: translateY(-100%);
+
+                    @media ($media_sm) {
+                        width: 8rem;
+                        height: 4rem;
+                    }
+                }
+
+                &-2 {
+                    width: 6.8rem;
+                    height: 6.8rem;
+                    background-color: $color_red;
+                    border-radius: 50%;
+                    right: 0;
+                    bottom: 0;
+                    transform: translate(100%, 50%);
+
+                    @media ($media_sm) {
+                        transform: translate(0%, 50%);
+                    }
+                }
+            }
+        }
+
+        &-img {
+            position: absolute;
+            max-width: 24rem;
+            top: 50%;
+            transform: translateY(calc(-50% + 3rem));
+
+            @media ($media_sm) {
+                position: relative;
+                max-width: 100%;
+                transform: translateY(0);
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &-content {
+            margin-left: 28rem;
+
+            @media ($media_sm) {
+                margin-left: 0;
+            }
+
+            &-header {
+                font-weight: 500;
+                font-size: 1.9rem;
+
+                @media ($media_sm) {
+                    font-size: 1.6rem;
+                }
+
+                strong {
+                    font-weight: 600;
+                    color: $color_blue;
+                    white-space: nowrap;
+
+                    @media ($media_sm) {
+                        white-space: initial;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            &-subheader {
+                font-size: 1.65rem;
+                font-weight: 600;
+                margin: 2.22rem 0;
+
+                @media ($media_sm) {
+                    font-size: 1.4rem;
+                }
+
+                .mark {
+                    &::before {
+                        bottom: 0.15rem;
+                    }
+                }
+            }
+
+            &-btn {
+                @media ($media_sm) {
+                    position: absolute;
+                    bottom: calc(var(--section_padding) * 2);
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+}
+
+// === / cryptocount ===

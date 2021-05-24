@@ -48,7 +48,7 @@ html, body {
 
     &.visible {
         visibility: visible;
-        opacity: 0.8;
+        opacity: 0.35;
     }
 }
 
@@ -196,8 +196,79 @@ span.mark {
     }
 }
 
+.scroll_block_dummy {
+    position: absolute;
+    top: -9999px;
+    width: 50px;
+    height: 50px;
+    overflow: scroll;
+    visibility: hidden;
+}
+
 .bg_gradient {
     background: $color_gradient_main;
+}
+
+.bg_gradient_reverse {
+    background: $color_gradient_main_reverse;
+}
+
+.checkbox_custom {
+    position: relative;
+    width: 0px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+    }
+
+    &::before {
+        width: 1.33rem;
+        height: 1.33rem;
+        border-radius: 0.3rem;
+        background-color: $color_white;
+        border: 2px solid lighten($color_gray, 20%);
+    }
+
+    &:checked {
+        &::before {
+            border-radius: 0.3rem;
+            background-color: $color_blue;
+            border: 2px solid $color_blue;
+        }
+
+        &::after {
+            background-color: $color_white;
+            border-radius: 2px;
+            width: 0.5rem;
+            height: 0.5rem;
+            transform: translate(85%, 80%);
+        }
+    }
+}
+
+
+
+.input_text {
+    background-color: $color_bg_secondary;
+    border: 1px solid $color_border;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1.3rem;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+
+    &:hover, &:focus {
+        border-color: $color_border_active;
+    }
+
+    &:disabled {
+        background: $color_input_disabled_bg;
+        border: 1px solid $color_input_disabled_border;
+        color: $color_gray;
+    }
 }
 
 // === / Mixins ===
