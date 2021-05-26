@@ -1350,6 +1350,7 @@ span.mark::before {
 
 .section-main .main-img {
   min-width: 25rem;
+  max-width: 25rem;
   margin-right: -5rem;
 }
 
