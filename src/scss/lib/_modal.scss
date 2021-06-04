@@ -243,6 +243,42 @@
             }
         }
 
+        &-divider {
+            text-align: center;
+            position: relative;
+            margin: 2rem 0;
+
+            @media ($media_sm) {
+                margin: 1.2rem 0;
+            }
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: $color_border;
+                position: absolute;
+
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            span {
+                color: $color_gray;
+                padding: 0 1rem;
+                background-color: $color_white;
+                position: relative;
+            }
+        }
+
+        &-telegram {
+
+            .btn_bordered {
+                width: 100%;
+            }
+        }
+
         &-link {
             margin-top: 1.8rem;
             text-align: center;

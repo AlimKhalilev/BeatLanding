@@ -496,6 +496,33 @@ body.hideScroll {
   background-color: #1B2D9D;
 }
 
+.btn_bordered {
+  background: #FCFDFF;
+  border: 2px solid #D3E3FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.8rem;
+  text-decoration: none;
+  color: #373943;
+}
+
+.btn_bordered svg {
+  height: 2.6rem;
+  width: 2.6rem;
+  margin-right: 0.9rem;
+}
+
+.btn_bordered span {
+  font-weight: 500;
+}
+
 .btn_subscribe {
   background-color: #fff;
   -webkit-box-shadow: 0px 21px 22px -13px rgba(62, 84, 216, 0.22);
@@ -914,6 +941,36 @@ span.mark::before {
 .modal-content-btn.half .btn {
   -ms-flex-preferred-size: 49%;
       flex-basis: 49%;
+}
+
+.modal-content-divider {
+  text-align: center;
+  position: relative;
+  margin: 2rem 0;
+}
+
+.modal-content-divider::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #D3E3FF;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.modal-content-divider span {
+  color: #929398;
+  padding: 0 1rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.modal-content-telegram .btn_bordered {
+  width: 100%;
 }
 
 .modal-content-link {
@@ -2485,6 +2542,10 @@ span.mark::before {
 
   .modal-content-btn.half .btn:not(:last-child) {
     margin-bottom: 0.5rem;
+  }
+
+  .modal-content-divider {
+    margin: 1.2rem 0;
   }
 
   .section-header .header {
