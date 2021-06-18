@@ -1800,3 +1800,89 @@
 }
 
 // === / follow ===
+
+// === app ===
+
+.section-app {
+
+    .section-inner {
+    
+    }
+    
+    .app {
+        display: flex;
+        align-items: center;
+
+        @media ($media_sm) {
+            flex-direction: column-reverse;
+            padding: 5rem 0 3rem 0;
+        }
+
+        &-img {
+            margin: -2rem 1rem 0 -4rem;
+            min-width: 32rem;
+
+            @media ($media_sm) {
+                margin: 0;
+                width: 100vw;
+                min-width: auto;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &-content {
+
+            &-header {
+
+                h3 {
+                    font-size: 1.75rem;
+                    color: $color_black_title;
+
+                    @media ($media_sm) {
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            &-text {
+                margin: 1.75rem 0 3.2rem 0;
+
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+
+            &-links {
+                display: flex;
+
+                @media ($media_sm) {
+                    justify-content: center;
+                }
+
+                a {
+                    display: inline-block;
+                    max-width: 11.5rem;
+                    
+                    &:not(:last-child) {
+                        margin-right: 1.5rem;
+                    }
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// === / app ===

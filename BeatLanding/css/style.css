@@ -2590,6 +2590,56 @@ span.mark::before {
   display: inline-block;
 }
 
+.section-app .app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-app .app-img {
+  margin: -2rem 1rem 0 -4rem;
+  min-width: 32rem;
+}
+
+.section-app .app-img img {
+  max-width: 100%;
+}
+
+.section-app .app-content-header h3 {
+  font-size: 1.75rem;
+  color: #24252E;
+}
+
+.section-app .app-content-text {
+  margin: 1.75rem 0 3.2rem 0;
+}
+
+.section-app .app-content-text p {
+  font-size: 1.1rem;
+}
+
+.section-app .app-content-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section-app .app-content-links a {
+  display: inline-block;
+  max-width: 11.5rem;
+}
+
+.section-app .app-content-links a:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.section-app .app-content-links a img {
+  max-width: 100%;
+}
+
 @media (max-width: 1600px) {
   .section-inner {
     max-width: 1080px;
@@ -3352,6 +3402,35 @@ span.mark::before {
     padding: 1.5rem 0;
     width: 100%;
     text-align: center;
+  }
+
+  .section-app .app {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 5rem 0 3rem 0;
+  }
+
+  .section-app .app-img {
+    margin: 0;
+    width: 100vw;
+    min-width: auto;
+    overflow: hidden;
+  }
+
+  .section-app .app-img img {
+    width: 100%;
+  }
+
+  .section-app .app-content-header h3 {
+    font-size: 2rem;
+  }
+
+  .section-app .app-content-links {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
