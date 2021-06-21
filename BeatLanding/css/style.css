@@ -1748,8 +1748,10 @@ span.mark::before {
   text-align: center;
 }
 
-.section-investments .investments-bottom-img img {
+.section-investments .investments-bottom-img img,
+.section-investments .investments-bottom-img svg {
   max-width: 100%;
+  height: auto;
 }
 
 .section-investments .investments-bottom-img a {

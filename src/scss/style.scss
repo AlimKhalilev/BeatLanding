@@ -669,8 +669,9 @@
                     margin: 0 -1rem;
                 }
 
-                img {
+                img, svg {
                     max-width: 100%;
+                    height: auto;
                 }
 
                 a {
