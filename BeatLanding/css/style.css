@@ -1034,6 +1034,10 @@ span.mark::before {
   width: 100%;
 }
 
+.section-header .header-logo {
+  z-index: 2;
+}
+
 .section-header .header-logo .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1916,8 +1920,7 @@ span.mark::before {
   margin: -3rem -8.5rem -9.5rem -8.5rem;
 }
 
-.section-work .work-cards-card-img img,
-.section-work .work-cards-card-img svg {
+.section-work .work-cards-card-img img {
   width: 100%;
   max-width: 100%;
 }
@@ -3199,10 +3202,9 @@ span.mark::before {
             transform: unset;
   }
 
-  .section-work .work-cards-card-img img,
-  .section-work .work-cards-card-img svg {
+  .section-work .work-cards-card-img img {
     width: 140%;
-    max-width: 1450%;
+    max-width: 140%;
     margin-left: -20%;
   }
 

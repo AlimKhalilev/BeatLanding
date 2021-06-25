@@ -888,13 +888,13 @@
                         overflow: hidden;
                     }
 
-                    img, svg {
+                    img {
                         width: 100%;
                         max-width: 100%;
 
                         @media ($media_sm) {
                             width: 140%;
-                            max-width: 1450%;
+                            max-width: 140%;
                             margin-left: -20%;
                         }
                     }
