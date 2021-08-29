@@ -2646,6 +2646,53 @@ span.mark::before {
   max-width: 100%;
 }
 
+.section-press.spaceTop {
+  padding: 5.55rem 0 0 0;
+}
+
+.section-press .press-header {
+  margin-bottom: 3.5rem;
+}
+
+.section-press .press-cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.33rem;
+}
+
+.section-press .press-cards-card {
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background: #F2F7FE;
+  border: 1px solid #E6EEFF;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  text-decoration: none;
+  min-height: 6.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-press .press-cards-card:hover {
+  -webkit-box-shadow: 0px 40px 34px -21px rgba(62, 84, 216, 0.11);
+          box-shadow: 0px 40px 34px -21px rgba(62, 84, 216, 0.11);
+  -webkit-transform: translateY(-0.5rem);
+      -ms-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
+.section-press .press-cards-card img {
+  max-width: 100%;
+}
+
 @media (max-width: 1600px) {
   .section-inner {
     max-width: 1080px;
@@ -2667,6 +2714,10 @@ span.mark::before {
 
   .section-work .work-cards-card-img {
     width: 40rem;
+  }
+
+  .section-press .press-cards-card {
+    padding: 0.5rem;
   }
 }
 
@@ -3437,6 +3488,15 @@ span.mark::before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .section-press .press-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-press .press-cards-card {
+    height: 6.5rem;
+    padding: 1rem;
   }
 }
 
