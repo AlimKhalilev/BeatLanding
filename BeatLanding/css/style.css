@@ -2226,6 +2226,7 @@ span.mark::before {
   color: #24252E;
   font-size: 1.33rem;
   font-weight: 600;
+  max-width: 80%;
 }
 
 .section-tarrifs .tarrifs-cards-card-cost {
